@@ -1,7 +1,7 @@
 import './ItemProduct.scss';
 import Count from '../Contador/Contador';
 const ItemProduct = ({data}) => {
-    const {title,descript,price,src,stock}= data;
+    const {id,title,descript,price,src,stock}= data;
     return(
         <article className='itemProduct'>
             <img src={src} />
