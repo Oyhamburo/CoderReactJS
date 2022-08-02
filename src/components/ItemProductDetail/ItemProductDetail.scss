@@ -1,0 +1,33 @@
+.itemProductDetail{
+    display: flex;
+    font-size: 1.4rem;
+    justify-content: center;
+        & h2 {
+            font-weight: bold;
+            color: rgb(0, 153, 255);
+            font-size: 1.9rem;
+        }
+        &__img{
+            width: 650px;
+        }
+        &__container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & div{
+                padding: 0.5rem 0;
+
+            }
+            &__span1{
+                color: red;
+                font-size: 1.7rem;
+                font-weight: bold;
+                margin-right: 1rem;
+            }
+            &__span2{
+                text-decoration: line-through;
+            }
+            &__Marca{
+            }
+        }
+}
