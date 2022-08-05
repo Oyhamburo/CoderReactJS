@@ -1,8 +1,7 @@
-import './ItemProductDetail.scss';
 import Count from '../Contador/Contador';
-const ItemProductDetail = ({data}) => {
-    const {id,title,color,price,src,stock}= data;   
-    let priceOld = price +3000;
+
+const ItemDetail = ({data}) => {
+    const {title,price,stock,src} = data;
     return(
         <article className='itemProductDetail'>
             <img src={src} className='itemProductDetail__img'/>
@@ -10,10 +9,10 @@ const ItemProductDetail = ({data}) => {
                 <h2>{title}</h2>
                 <div>
                     <span className='itemProductDetail__container__span1'>{price}</span>
-                    <span className='itemProductDetail__container__span2'>{priceOld}</span>
+                    <span className='itemProductDetail__container__span2'>{15000}</span>
                 </div>
                 <div className='itemProductDetail__container__Marca'>Marca: Roller Shop</div>
-                <div>Color: {color}</div>
+                <div>Color: TEST</div>
                 <Count stock={stock}/>
                 <div >
                     <button>Comprar</button>
@@ -22,5 +21,4 @@ const ItemProductDetail = ({data}) => {
         </article>
     )
 }
-
-export default ItemProductDetail
+export default ItemDetail

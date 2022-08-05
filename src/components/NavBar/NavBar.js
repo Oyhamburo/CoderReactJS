@@ -1,5 +1,6 @@
 import './NavBar.scss';
 import CardWidget from './cardWidget';
+import {Link} from 'react-router-dom'
 const NavBar = () => {
     return(
         <nav>
@@ -8,16 +9,16 @@ const NavBar = () => {
             </div>
             <div className='nav__menu'>
                 <div>
-                    <a>La empresa</a>
+                    <Link to="/">Inicio</Link>
                 </div>
                 <div>
-                    <a>Galeria</a>
+                    <Link to="/productos">Productos</Link>
                 </div>
                 <div>
-                    <a>Cortinas</a>
+                    <Link to="">About Us</Link>
                 </div>
                 <div>
-                    <a>Contacto</a>
+                    <Link to="/contacto">Contacto</Link>
                 </div>
             </div>
             <div>

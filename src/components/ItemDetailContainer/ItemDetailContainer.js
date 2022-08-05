@@ -2,7 +2,10 @@ import './ItemDetailContainer.scss';
 import ItemListDetail from '../ItemListDetail/ItemListDetail';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import product from '../utils/product.mock';
+import products from '../utils/products.mock';
+import ItemDetail from '../ItemDetail/ItemDetail';
 const ItemDetailContainer = () => {
     
     const [listProduct, setListProduct] = useState([])
@@ -10,7 +13,7 @@ const ItemDetailContainer = () => {
     const getProducts = new Promise( (resolve, reject) => {
         setTimeout( () => {
             resolve(product)
-        }, 2000)
+        }, 150)
     })
 
     
@@ -26,15 +29,26 @@ const ItemDetailContainer = () => {
         })
     }, [])
 
+    const [productData, setProductData] = useState({})
+    const { id }= useParams();
+    useEffect( () => {
+        products.some( (e) => {
+
+            if(e.id == id) {
+                setProductData(e)
+            }
+        })
+    })
 
     return(
         <section >
             <div className='itemContainer'>
-                {console.log('hola'+listProduct)}
-                <ItemListDetail dataProducts={listProduct} />
+                {/* <ItemListDetail dataProducts={listProduct} /> */}
+                <ItemDetail data={productData} />
             </div>
         </section>
     )
 }
 
 export default ItemDetailContainer
+
