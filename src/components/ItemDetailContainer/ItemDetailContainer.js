@@ -43,7 +43,6 @@ const ItemDetailContainer = () => {
     return(
         <section >
             <div className='itemContainer'>
-                {/* <ItemListDetail dataProducts={listProduct} /> */}
                 <ItemDetail data={productData} />
             </div>
         </section>

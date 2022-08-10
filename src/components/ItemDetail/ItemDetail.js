@@ -1,6 +1,11 @@
 import Count from '../Contador/Contador';
+import { useState } from 'react';
+import './ItemProductDetail.scss';
+import {Link} from 'react-router-dom'
+
 
 const ItemDetail = ({data}) => {
+    const [quantitySelected, setQuantitySelected] = useState(0)
     const {title,price,stock,src} = data;
     return(
         <article className='itemProductDetail'>
@@ -13,10 +18,10 @@ const ItemDetail = ({data}) => {
                 </div>
                 <div className='itemProductDetail__container__Marca'>Marca: Roller Shop</div>
                 <div>Color: TEST</div>
-                <Count stock={stock}/>
-                <div >
-                    <button>Comprar</button>
-                </div>
+                {
+                    quantitySelected > 0 ? <Link to="/cart"><button>Terminar Compra</button></Link> : <Count stock={stock} setQuantitySelected={setQuantitySelected}/>
+                }
+                
             </div>
         </article>
     )
