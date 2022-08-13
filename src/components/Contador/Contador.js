@@ -1,7 +1,11 @@
 import { useState } from 'react';
+import { CartContext } from '../context/cartContext';
 
-const Count = ({stock,setQuantitySelected}) => {
+const Count = ({stock,setQuantitySelected,dataProduct}) => {
+    const {setCartProducts} = useState(CartContext)
+
     const [contador, setContador] = useState(1);
+
     const addNumber = () => {
         if(contador<stock){
             setContador(contador + 1)
@@ -13,6 +17,8 @@ const Count = ({stock,setQuantitySelected}) => {
         }
     }
     const onAdd = () =>{
+        console.log(dataProduct)
+        setCartProducts(dataProduct)
         setQuantitySelected(contador)
     }
     return(

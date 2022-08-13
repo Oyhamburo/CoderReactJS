@@ -19,7 +19,7 @@ const ItemDetail = ({data}) => {
                 <div className='itemProductDetail__container__Marca'>Marca: Roller Shop</div>
                 <div>Color: TEST</div>
                 {
-                    quantitySelected > 0 ? <Link to="/cart"><button>Terminar Compra</button></Link> : <Count stock={stock} setQuantitySelected={setQuantitySelected}/>
+                    quantitySelected > 0 ? <Link to="/cart"><button>Terminar Compra</button></Link> : <Count stock={stock} setQuantitySelected={setQuantitySelected} dataProduct={data}/>
                 }
                 
             </div>
