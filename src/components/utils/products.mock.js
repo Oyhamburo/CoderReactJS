@@ -5,7 +5,8 @@ const products = [
         color:'Blanca',
         price:'$$$$',
         src:'../cortina.webp',
-        stock:'7'
+        stock:'7',
+        cant: 0
     },
     {
         id:2,
@@ -13,7 +14,8 @@ const products = [
         color:'Negra',
         price:'$$$$',
         src:'../cortina.webp',
-        stock:'7'
+        stock:'7',
+        cant: 0
     },
     {
         id:3,
@@ -21,7 +23,8 @@ const products = [
         color:'Beige',
         price:'$$$$',
         src:'../cortina.webp',
-        stock:'7'
+        stock:'7',
+        cant: 0
     },
     {   
         id:4,
@@ -29,7 +32,8 @@ const products = [
         color:'Azul',
         price:'$$$$',
         src:'../cortina.webp',
-        stock:'7'
+        stock:'7',
+        cant: 0
     },
     {
         id:5,
@@ -37,7 +41,8 @@ const products = [
         color:'roja',
         price:'$$$$',
         src:'../cortina.webp',
-        stock:'7'
+        stock:'7',
+        cant: 0
     },
 ]
 export default products

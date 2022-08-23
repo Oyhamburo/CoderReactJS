@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { CartContext } from '../context/cartContext';
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
-const Count = ({stock,setQuantitySelected,dataProduct}) => {
-    const {setCartProducts} = useState(CartContext)
+const Count = ({stock,setQuantitySelected,data}) => {
+    const {addProductToCart} = useContext(CartContext)
 
-    const [contador, setContador] = useState(1);
+    const [contador, setContador] = useState(0);
 
     const addNumber = () => {
         if(contador<stock){
@@ -17,8 +18,10 @@ const Count = ({stock,setQuantitySelected,dataProduct}) => {
         }
     }
     const onAdd = () =>{
-        console.log(dataProduct)
-        setCartProducts(dataProduct)
+        for (let index = 0; index < contador; index++) {
+            data.cant = contador;
+            addProductToCart(data)
+        }
         setQuantitySelected(contador)
     }
     return(

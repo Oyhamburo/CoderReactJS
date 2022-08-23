@@ -1,9 +1,15 @@
-
+import { useContext } from "react"
+import { CartContext } from "../context/CartContext"
+// import 'Carrito.scss' 
 const CheckOut = () => {
+    const {cartProducts} = useContext(CartContext)
     return(
-        <>
-            <h1>Pagina CheckOut</h1>
-        </>
+        <body>
+            {cartProducts.map( (product) => {
+                return <article><h1>{product.title}</h1><p>{product.cant}</p><img src={product.src} /></article>
+            })}
+
+        </body>
     )
 }
 

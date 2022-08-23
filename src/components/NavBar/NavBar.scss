@@ -17,3 +17,20 @@ nav {
         width: 130px;
     }
 }
+.section {
+    display: block;
+    position: absolute;
+    width: 200px;
+    background-color: aqua;
+    height: 400px;
+}
+
+
+.icono:hover {
+    color: red;
+}
+.icono:hover .section{
+    display: block !important;
+    background-color: red;
+}
+
